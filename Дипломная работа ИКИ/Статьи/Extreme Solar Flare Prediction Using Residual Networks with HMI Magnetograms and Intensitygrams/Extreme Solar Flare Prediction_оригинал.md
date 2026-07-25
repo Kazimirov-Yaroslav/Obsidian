@@ -31,7 +31,7 @@ Our study is different because it specifically targets the prediction of extreme
 
 Our approach involves a two-step process as shown in Figure 1: training a Residual Network(He et al. 2016) on the SDO dataset(NASA 2024) to predict solar flare occurrences and using computer vision techniques to detect sunspots on HMI intensitygrams and segment magnetic field patches from HMI magnetograms. These patches are then used with the trained model to predict extreme flare occurrences.
 
-![[Изображения/Figure 1.png]]
+![[Figure 1.png]]
 *Figure 1: The two-phase process for extreme solar flare prediction. Phase 1 involves training a deep neural network(ResNet) with HMI magnetogram(HMIB) data to classify extreme and non-extreme events. Phase 2 includes detecting sunspots on HMI intensitygram(HMII) images, extracting corresponding magnetic field patches from HMIB, and using the trained model to predict extreme solar flare occurrences.*
 
 ### 3.1 Training Deep Neural Networks with Magnetogram
@@ -42,7 +42,7 @@ We utilized the ResNet50 architecture(He et al. 2016) for training on HMI magnet
 
 Our methodology for detecting sunspots using HMI intensitygrams involves key steps as shown in Figure 2. We start with real-time HMI intensitygram images, convert them to RGB color space, and apply a noise-canceling filter(Buades, Coll, and Morel 2005). The denoised images are then binarized using adaptive thresholding(Gonzalez and Woods 2006) to distinguish sunspots from the background. Contours on the binary image(Marr 1980) detect sunspots, which are filtered by location within the solar disk. Close bounding rectangles are merged. Using detected sunspots, we extract 256x256 patches from HMI magnetogram images centered on the sunspot locations. These patches are fed into a trained ResNet to predict extreme solar flare occurrences.
 
-![[Изображения/Figure 2.png]]
+![[Figure 2.png]]
 *Figure 2: The process of detecting sunspots using HMI intensitygrams. From left to right: the original HMI intensitygram (HMII), the binarized HMII, detected sunspots on the HMII, and the corresponding sunspot detection mapped onto the HMI magnetogram(HMIB).*
 
 ## 4 Results
@@ -55,14 +55,14 @@ We used a ResNet-50 model(He et al. 2016) pretrained on the ImageNet dataset(Den
 
 The training results of our deep neural networks demonstrate that using HMI magnetogram(HMIB) patches for predicting extreme solar flares yields higher accuracy compared to other satellite image datasets. As shown in Figure 3, the test accuracy achieved with HMIB images is 0.755, significantly higher than the accuracies obtained with various AIA datasets, such as AIA-131(0.713), AIA-171(0.710), and AIA-335(0.712). This underscores the importance of magnetic field data captured in HMIB for accurate solar flare prediction.
 
-![[Изображения/Figure 3.png]]
+![[Figure 3.png]]
 *Figure 3: Comparison of test accuracy for different satellite image datasets using the SDOBenchmark dataset(Bolzern and Aerni 2024). The model used is ResNet-50(He et al. 2016) pre-trained on ImageNet(Deng et al. 2009) for predicting two flare classes, QA and MX.*
 
 ### 4.3 Prediction Results
 
 Our model demonstrated ability in predicting MX(C, M, and X) class solar flares using HMI magnetograms and intensitygrams. Figure 4 shows the final prediction result, with the left panel showing the HMI magnetogram(HMIB) where the predicted flare region is highlighted, and the right panel displaying the corresponding AIA-131 image that confirms the flare occurrence.
 
-![[Изображения/Figure 4.png]]
+![[Figure 4.png]]
 *Figure 4: Flare Prediction Results.(Left) HMI magnetogram(HMIB) showing predicted MX class flare region.(Right) Corresponding AIA-131 image showing the flare. Timeline is 2022-01-16 00:00:00.*
 
 ## 5 Discussion
