@@ -1,0 +1,12 @@
+/* Простой отступ для вложенных details */
+details details {
+  margin-left: 24px;
+}
+
+details details details {
+  margin-left: 24px;
+}
+
+details details details details {
+  margin-left: 24px;
+}

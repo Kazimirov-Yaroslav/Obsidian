@@ -1,0 +1,6 @@
+# Принудительно используем LF (перевод строки как в Linux/Android) 
+# для всех текстовых файлов, чтобы Windows не ломала их своими CRLF
+* text=auto eol=lf
+*.md text
+*.css text
+*.json text

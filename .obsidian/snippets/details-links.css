@@ -1,0 +1,20 @@
+/* Разрешаем клики по ссылкам в details summary */
+.markdown-source-view.is-live-preview details summary a,
+.markdown-rendered details summary a {
+    pointer-events: auto !important;
+    z-index: 10;
+    position: relative;
+}
+
+/* Останавливаем всплытие клика от summary */
+.markdown-source-view.is-live-preview details summary,
+.markdown-rendered details summary {
+    cursor: default;
+}
+
+/* Ссылки должны быть кликабельны */
+.markdown-source-view.is-live-preview details summary a,
+.markdown-rendered details summary a {
+    cursor: pointer !important;
+    color: var(--text-accent) !important;
+}
