@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",
-                "mode": "preview",
-                "source": false
+                "file": "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
+                "mode": "source",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Extreme Solar Flare Prediction_перевод"
+              "title": "Заметки по статье."
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 368.5
   },
   "right": {
     "id": "bce8f3fc30a535bc",
@@ -183,9 +183,17 @@
   },
   "active": "c8fcec2acfabbd4f",
   "lastOpenFiles": [
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 6.png",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 5.png",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_оригинал.md",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 4.png",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения",
+    "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Заметки по статье..md",
-    "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",
     "Новый текстовый документ.txt",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams.pdf",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Изображения/Figure 4.png",
@@ -216,12 +224,8 @@
     "Папки в компьютере/Документы/appcompat/appraiser/appraiser.md",
     "appcompat/appraiser/APPRAISER_TelemetryBaseline_21H1.bin.md",
     "appcompat/appraiser",
-    "appcompat",
     "Папки в компьютере/Документы/appcompat/appraiser/Telemetry/Telemetry.md",
     "Папки в компьютере/Документы/appcompat/appraiser/AltData/AltData.md",
-    "Папки в компьютере/Документы/appcompat/appraiser/Telemetry",
-    "Папки в компьютере/Документы/appcompat/encapsulation/encapsulation.md",
-    "Папки в компьютере/Документы/addins/addins.md",
     "Без названия.canvas"
   ]
 }
