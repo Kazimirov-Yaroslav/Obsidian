@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
-                "mode": "source",
+                "file": "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Заметки по статье."
+              "title": "Extreme solar events_перевод"
             }
           }
         ]
@@ -183,11 +183,14 @@
   },
   "active": "c8fcec2acfabbd4f",
   "lastOpenFiles": [
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 3.png",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 2.png",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 1.png",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 6.png",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 5.png",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 4.png",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",
@@ -225,7 +228,6 @@
     "appcompat/appraiser/APPRAISER_TelemetryBaseline_21H1.bin.md",
     "appcompat/appraiser",
     "Папки в компьютере/Документы/appcompat/appraiser/Telemetry/Telemetry.md",
-    "Папки в компьютере/Документы/appcompat/appraiser/AltData/AltData.md",
     "Без названия.canvas"
   ]
 }
