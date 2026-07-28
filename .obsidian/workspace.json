@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5
+    "width": 214.5
   },
   "right": {
     "id": "bce8f3fc30a535bc",
@@ -183,6 +183,7 @@
   },
   "active": "c8fcec2acfabbd4f",
   "lastOpenFiles": [
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events.pdf",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 3.png",
