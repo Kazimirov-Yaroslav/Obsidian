@@ -308,4 +308,123 @@ A neural network model of a variational autoencoder type was proposed to describ
 
 A set of sunspot group images from the catalogue of the Kislovodsk Mountain Astronomical Station was used for training. The task of the model at the training stage was to construct encoder and decoder functions such that their composition (i.e., compression followed by restoration) would reproduce the original image. In addition, the PCA method was used to rank the parameters obtained at the output of the encoder. As a result, a model was constructed that transforms sunspot group images 256 × 256 pixels in size into 283 numerical parameters. Next, the obtained parameters were analyzed and thereby given a physical interpretation. For this, one or more parameters were varied with the others fixed, and the restored images were studied. An example of the obtained images is shown in Fig. 9, whence we can conclude that one of the parameters characterizes the general bipolar or unipolar structure of the group and the other is responsible for the tilt angle of the group. As an application based on the obtained parameters, a model for assessing the complexity and for automatic classification of sunspot groups was proposed.
 
-The idea of studying and using features extracted by machine learning methods also appears in a number of other studies. For example, an autoencoder was used to describe spectral line profiles; it was also shown that the obtained parameters allow a physical interpretation: in particular, they characterize the spectral line's asymmetry and width. An autoencoder model was used to identify anomalous images and localize active regions in a series of solar disk images taken by the SDO satellite. Also based on parameters extracted from solar disk images, a model was proposed for generating synthetic images and predicting the radio emission flux.
+The idea of studying and using features extracted by machine learning methods also appears in a number of other studies. For example, an autoencoder was used to describe spectral line profiles; it was also shown that the obtained parameters allow a physical interpretation: in particular, they characterize the spectral line's asymmetry and width. An autoencoder model was used to identify anomalous images and localize active regions in a series of solar disk images taken by the SDO satellite. Also based on parameters extracted from solar disk images, a model was proposed for generating synthetic images and predicting the radio emission flux that the parameters of magnetic active regions identified by an autoencoder can serve as precursors for solar flares and can be used to improve the accuracy and lead time of forecasts.
+
+The above examples from solar physics, as well as a number of similar studies in other areas, show that machine learning methods open up new possibilities for describing and analyzing data. It is noteworthy that some of the parameters identified by the models coincide with those on which experts working with data primarily focus. And while an expert comes to a conclusion about the importance of some parameters based on many years of experience and knowledge of the subject area, a machine learning model does this only by collecting statistics. We also note that elements of this approach can often be found in classification, regression, and forecasting models, for example, as additional parameters on which the model is based. In the next section, we consider these constructions in more detail.
+
+### 5.3 Solar activity forecasts
+
+The task of forecasting solar activity parameters arguably accumulates all the main theoretical models and observational data. At the same time, many mechanisms remain not entirely clear and are in fact replaced by empirically (statistically) established connections. The use of machine learning methods is of interest because they allow revealing connections in a much wider data space and, as a result, obtaining more accurate models on the one hand and new ideas for theoretical models on the other.
+
+The forecast tasks fall into two large groups: the forecast of 'rare' events and the forecast of indices. We discuss their properties.
+
+#### 5.3.1 Forecasting rare events
+
+This problem includes forecasting events that can be called rare against the background of long-term solar activity: solar flares (the forecast of powerful flares of classes M and X being of practical interest, first and foremost), coronal mass ejections (CMEs), solar proton events (SPEs), etc. The standard technique is to discretize time (for example, by days) and reduce the problem to a binary classification one: whether an event occurs in a given time interval. Due to the rare nature of events, the number of examples when an event occurred is much less than when it did not, which makes the sample highly unbalanced (for example, for one region with an X-flare, there are 800 regions without flares). When attempting to construct standard forecast models based on machine learning (or another statistical method), it turns out that the models tend to ignore rare events and collapse to a trivial solution: predicting the predominant class. This requires the use of techniques that increase the significance of error for rare events, for example, by introducing weight coefficients into the loss functions, artificially balancing the sample by selecting an equal number of positive and negative examples, or simulating new positive examples.
+
+Another feature resulting from the discretization of time in forecast models is that it is not entirely clear how the accuracy of the model can be assessed. For example, according to a forecast, an event should occur within 24 hours, but it actually occurs after 24 hours and 1 minute. During standard training and testing of the model, such a case is classified as erroneous, although from an intuitive standpoint, the model was close to the correct answer.
+
+Similar problems arise with the very definition of what is considered an event and what is not. In fact, most events are by definition associated with some conventional threshold (for example, the particle energy being greater than 10 MeV for SPE-type events). In this case, a false positive forecast may also be associated not with the global inaccuracy of the model but with the proximity to the threshold value. It may seem that such nuances are somehow leveled out against the majority background, but it is worth remembering that the total number of rare events is small, and an error in a single event can actually affect the entire model. Therefore, the practice is to use not one metric (for example, the fraction of correct predictions) but a set of metrics that characterize the predictive power of the model from different sides. And it is by no means guaranteed that one model that is better than another in terms of one metric would be better in terms of all metrics simultaneously. As an example, in Table 3, we show a number of metrics often encountered in papers on the forecasting of solar activity events. Because most binary classification metrics are calculated from the error matrix, the following notation is used: TP (true positive) is the number of correctly predicted positive classes (an event did occur), FP (false positive) is the number of false positive responses, TN (true negative) is the number of correctly predicted negative classes (no event), FN (false negative) is the number of false negative responses, P = TP + FN is the number of positive classes in a sample, and N = TN + FP is the number of negative classes in a sample.
+
+We note yet another aspect encountered in assessing the model accuracy. The concept of a positive or negative forecast for logistic regression models is of a threshold nature: the model forecast is a number in the range from 0 to 1 (interpreted as the probability of a given object belonging to the positive class), which is then compared with the standard decision threshold 0.5. When the threshold changes, the error matrix and hence the metrics derived from it change. For example, when the threshold increases, the type-I error decreases but the type-II error increases. For an integral assessment of the effect of the threshold, the sensitivity is plotted against 1 - specificity by varying the threshold from 0 to 1. The resulting graph is called the receiver operating characteristic (ROC) curve. By definition, the graph is nondecreasing and connects the origin with the point (1, 1). The area under the graph is called the ROC AUC (area under curve) metric; it is equal to 1 for an ideal classifier (Fig. 10). The ROC AUC metric has a simple probabilistic interpretation: it is the probability that the response of the model to a randomly selected example from the positive class will be higher than the response to a randomly selected example from the negative class.
+
+Models for the prediction of active events are usually constructed for an active region that is a potential source of solar flares, CMEs, SPEs, and other events. Accordingly, the problem of identifying active regions arises, and the accuracy of the forecast depends on its solution. In machine learning, it is important that the models be based on the same sample, otherwise they are difficult to compare. A major contribution to solving this problem was to propose an identification algorithm and a dataset of SHARP (Space-weather HMI Active Region Patches) active regions and their parameters on vector magnetograms. In a subsequent paper, the first model for predicting solar flares was presented using the SHARP catalogue and a machine learning model.
+
+The diversity of subsequent models and comparison of the results is a subject of a separate large review. In particular, a review of solar flare forecasting models is given in a series of studies and in a recent review of SPE forecasting models, more than 30 SPE forecasting models were presented. We discuss one of them based on a neural network model, following the original study.
+
+The SPE forecasting model aggregates the parameters of magnetic active regions from the SHARP dataset observed during the day and forms a forecast for the SPE occurrence on the next day. The parameters of the active region pass through a fully connected neural network, which encodes them into a smaller number of variables. The parameters obtained from different active regions are combined into one vector, which is passed through a second fully connected neural network with a logistic activation function (sigmoid) on the output neuron. The model architecture is shown in Fig. 11. When training the network, the sample imbalance (1 to 34) was taken into account by duplicating positive examples many times. The proposed encoding-aggregation-forecast scheme is quite general and allows numerous variations. For example, it is possible to encode not the parameters of the active region but the image of the active region itself, use additional parameters from other telescopes during aggregation, and replace the neural network model with other machine learning models.
+
+![[Figure 9.png|Figure 9]]
+**Figure 9:** Reconstruction of images of sunspot groups by varying two parameters (denoted as Z1 and Z5) that encode the image. Interpretation follows from the figure: parameter Z1 encodes the unipolar or bipolar structure of the group, and Z5 defines its tilt.
+
+![[Figure 10.png|Figure 10]]
+**Figure 10:** Examples of ROC curves for different classifiers. Each point on a curve corresponds to model accuracy metrics (sensitivity and 1 - specificity) for a certain classification threshold; to plot the curve, threshold is varied from zero to one. Green dashed line is a purely random forecast model. Red curve is a model that works better than random. Orange curve is a model that is close to an error-free one. Blue curve is a model that gives inverse predictions (meaning that interpreting its predictions exactly to the contrary would give a good classifier). Area under ROC curve is called ROC AUC metric.
+
+![[Figure 11.png|Figure 11]]
+**Figure 11:** Neural network architecture for predicting SPEs. First neural network (AR block) encodes parameters of active region. Obtained parameters from different active regions are fed to input of second neural network, which outputs forecast.
+
+| Name | Definition | Interpretation |
+|---|---|---|
+| Precision | TP / (TP + FP) | Fraction of correct answers in positive forecasts |
+| Accuracy | (TP + TN) / N | Fraction of correct answers |
+| False positive rate (FPR), type-I error | FP / N | False positive prediction probability |
+| False negative rate (FNR), type-II error | FN / P | False negative prediction probability |
+| Sensitivity, recall, true positive rate (TPR) | TP / P | True positive prediction probability, 1 - type-II error |
+| Specificity, selectivity, true negative rate (TNR) | TN / N | True negative prediction probability, 1 - type-I error |
+| F1 score | 2 * precision * recall / (precision + recall) | Harmonic mean of precision and recall |
+| True Skill Statistic (TSS) | TP/P - FP/N | 1 - type-I error - type-II error |
+
+**Table 3:** Binary classification metrics.
+
+#### 5.3.2 Forecasting solar activity indices
+
+Unlike the problem of forecasting rare events, which in the standard setting is a classification problem, the forecast of solar activity indices (for example, the solar cycle, X-ray fluxes, and the Kp index of geomagnetic activity) is based on time series. The difference between the two standpoints is that classification is an interpolation problem, while time series forecasting is an extrapolation problem. This difference also propagates into the structure of the models. As regards neural networks, fully connected and convolutional networks are more common in the first case, and recurrent neural networks (RNNs), in the second case. A feature of recurrent models is the memory mechanism, which allows accumulating information when passing through a sequence of unlimited length. Figure 12 shows the simplest example of an RNN, in which, for a current observed value $x_t$, the internal state $h_t$ is updated by the rule
+
+$$h_t = f(U x_t + V h_{t-1}), \quad (12)$$
+
+and the output (predicted) value $y_t$ is calculated as a function of the internal state,
+
+$$y_t = g(W h_t), \quad (13)$$
+
+where $f$ and $g$ are activation functions, and $U$, $V$, and $W$ are trainable parameters of the model.
+
+In practice, more complex architectures are used that involve the concept of long short-term memory, analyze the sequence bidirectionally, and contain several levels of recurrent models.
+
+In 2021 (the beginning of the growth of the 25th solar cycle), a comparative graph of 34 forecasts of the amplitude of the 25th solar cycle was presented, demonstrating a large uncertainty in the forecast for the future, even though all methods successfully predicted past cycles (Fig. 13).
+
+In the machine learning framework, this situation can be explained as follows. A forecast of the next cycle maximum can be obtained either by directly predicting the maximum or by obtaining a forecast of the entire cycle, for example, using a recurrent model (Fig. 14), and then finding its maximum. In the first case, the size of the training sample is equal not to the number of years of observations of solar cycles but to the number of known maxima. Due to the large uncertainty of historical data, this number does not exceed several dozen. In the second case, a well-known problem arises: how to ensure the stability of a model that uses previous forecast values when constructing a forecast. For this, the model can be trained on a long forecast (of the order of the cycle length), but this again narrows the effective volume of the training sample to a size of the order of the number of solar cycles, as in the first case. Thus, a highly underdetermined problem arises (the volume of the training sample is several dozen, and a typical neural network model has orders of magnitude more free parameters), resulting in a large uncertainty in the forecast.
+
+Nevertheless, studies of the possibilities of solar cycle forecasting using machine learning methods are ongoing, contributing to the study of fundamental problems in the nature of solar cyclicity.
+
+The forecast of geomagnetic activity indices using machine learning methods is the subject of some studies; the forecast of solar wind is the subject of other studies. We note that these studies address the problem of short-term forecasts (several days in advance), which significantly increases the volume and variability of the training sample and allows expecting a more stable forecast.
+
+![[Figure 12.png|Figure 12]]
+**Figure 12:** Structure of simplest recurrent neural network. Left of gray arrow: compact view. New internal state $h_{t+1}$ is calculated based on current $h_t$ and observed $x_t$ values; output value $y_t$ is a function of internal state $h_t$; $U$, $V$, and $W$ are trainable parameters of the model. Right of gray arrow: expanded view of calculation of sequence of internal states and output values.
+
+![[Figure 13.png|Figure 13]]
+**Figure 13:** Forecasts of amplitude of 25th solar cycle.
+
+![[Figure 14.png|Figure 14]]
+**Figure 14:** Forecast based on recurrent model: $x_t$ is last observed value of time series. Forward forecast is built on the basis of preceding forecast values $\hat{x}_{t+k}$.
+
+### 5.4 Reconstruction of observational data
+
+A close relation exists between the different solar activity phenomena underlain by solar magnetic fields. The presence of this intrinsic relation allows posing the machine learning problem to transform observational data of one type into others. As a first example, we consider the problem of reconstructing polarity maps of a large-scale magnetic field based on observations of solar filaments.
+
+It is assumed that solar filaments (prominences) form along the neutral lines of the solar magnetic field. Knowing the positions of the filaments, we can estimate the position of the neutral line and then arrange the polarity signs such that different signs are on different sides of the neutral line. The finer details of this process were described in literature, but even taking them into account leaves the result of polarity map reconstruction ambiguous, and the main catalogues of polarity maps were created manually over a long period of time. The idea of an automated approach, proposed recently, is based on posing an optimization problem and solving it by a function defined by a fully connected neural network. A polarity map filled with plus and minus signs is regarded as the surface of a smooth function depending on the heliographic coordinates, where the plus sign corresponds to the function value +1 and the minus sign, to -1, the function value along the neutral line being 0. The optimization problem is constructed based on the idea that the filament coordinates define the coordinates at which the function is equal to zero, and on a number of physical constraints that prevent the convergence to the trivial (zero) solution. It turns out that the solution to such an optimization problem is close to a polarity map constructed manually by an expert (Fig. 15).
+
+A finer structure of the magnetic field (e.g., coronal magnetic fields) can be reconstructed from photospheric observations. Typically, this is done using a force-free field model (system of equations),
+
+$$\nabla \cdot \mathbf{B} = 0, \quad (14)$$
+$$(\nabla \times \mathbf{B}) \times \mathbf{B} = 0,$$
+
+with photospheric magnetograms $\mathbf{B}_0(x, y)$ taken as the boundary conditions:
+
+$$\mathbf{B}(x, y, 0) = \mathbf{B}_0(x, y). \quad (15)$$
+
+The numerical solution to this problem is greatly complicated by the fact that the observational data do not fully agree with the force-free field model, and a possible solution must violate one condition or the other. The situation that has arisen contradicts standard numerical methods for solving differential equations, but can be implemented in the framework of the PINN model. Let us recall that the idea is that the neural network defines a function of spatial coordinates, which is then optimized to satisfy the differential equation and boundary conditions as accurately as possible. In the context of reconstructing the coronal magnetic field, such an idea was demonstrated in recent studies (Fig. 16). In another study, the PINN model was used to simulate the propagation of shock waves in the solar atmosphere.
+
+Another example of a reconstruction problem is the translation of solar disk images obtained in one spectral region into images from another spectral region (image-to-image translation). In one study, a convolutional neural network model was proposed for reconstructing SDO/AIA images in the UV range using SDO/HMI magnetograms. A solution to the inverse problem was presented using a generative cGAN model (see the example in Fig. 17). As an application, the authors presented magnetograms of the far side of the Sun based on STEREO/EUVI observations. Further development of translation methods and new combinations of images were studied in other works.
+
+The task of increasing the spatial resolution of images and reducing noise can also be assigned to this group of tasks. One of the first attempts to use a convolutional neural network in this context was made in early studies. The model was trained on pairs of images with different spatial resolutions obtained by magnetohydrodynamic (MHD) modeling, and testing was carried out on real SDO/HMI magnetograms (Fig. 18). For further studies of models based on machine learning, see recent reviews.
+
+The problem of the reliability of the resulting reconstructions was discussed in specialized literature. The authors conclude that, although the results are statistically quite plausible, the reconstruction quality is significantly reduced for rare and powerful events.
+
+The reconstruction problem is especially relevant when working with historical observational data stored in the form of handwritten notes and sketches. Using such data for systematic analysis requires digitization, and machine learning can help here when working with large catalogues. For example, in one study, the problem of digitizing more than 10,000 pages of handwritten tables specifying the positions of spots, faculae, and prominences from the Zurich Observatory archives was solved. The main difficulty was the large variability of handwriting, and therefore the model trained on a limited (albeit large) subsample of examples had difficulty recognizing text from a new handwriting. The solution was an adaptive approach: the model (a convolutional recurrent neural network, CRNN) was automatically retrained on each new page, using only the fact that the numbers in the tables with coordinates were not completely arbitrary but manifested some dependence. An example of the digitization result is shown in Fig. 19.
+
+We note that the adaptive approach significantly extends the capabilities of machine learning models. In the classical approach, a model is trained on a sample consisting of pairs of independent and dependent variables $(x_i, y_i)$, and is then used unaltered on new data (supervised learning). In practice, however, significant statistical changes can occur in the data over time, which causes the quality of the model to decline. Again, the standard solution is to prepare a new training sample and retrain the model. However, this is not always possible: changes may occur frequently, and the process of preparing training data usually takes a long time. Moreover, the fact that there is a decrease in the model quality is usually apparent not immediately but only after some time. Therefore, approaches are being developed in which models are automatically and continuously adjusted using self-training.
+
+![[Figure 15.png|Figure 15]]
+**Figure 15:** Reconstruction examples of a magnetic field polarity map for three synoptic rotations (by rows). (a) Synoptic map specifying positions of solar filaments. (b) Polarity map constructed by an expert. (c) Averaging over 100 realizations of neural network reconstruction model. (d) Binarized version of (c).
+
+![[Figure 16.png|Figure 16]]
+**Figure 16:** Coronal magnetic field reconstruction above an active region using PINN model.
+
+![[Figure 17.png|Figure 17]]
+**Figure 17:** Example of operation of SDO/HMI magnetogram reconstruction model based on SDO/AIA image of solar disk in 304-Å line. (a) Original SDO/AIA image, (b) reconstruction result, and (c) original SDO/HMI image.
+
+![[Figure 18.png|Figure 18]]
+**Figure 18:** *(Place for Figure 18: Super-resolution of SDO/HMI magnetograms)*
+
+![[Figure 19.png|Figure 19]]
+**Figure 19:** *(Place for Figure 19: Digitization of historical Zurich Observatory tables)*

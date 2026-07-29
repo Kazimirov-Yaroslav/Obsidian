@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
-                "mode": "source",
+                "file": "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Заметки по статье"
+              "title": "Machine learning methods in solar physics_перевод"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
+                "file": "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Заметки по статье"
+              "title": "Обратные ссылки для Machine learning methods in solar physics_перевод"
             }
           },
           {
@@ -183,26 +183,27 @@
   },
   "active": "0d7d75b8b4bf641e",
   "lastOpenFiles": [
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_оригинал.md",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 17.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 16.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 15.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 14.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 13.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 12.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 11.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 10.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 9.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics.pdf",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
+    "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
+    "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Заметки по статье..md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 8.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 7.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 6.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 5.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 4.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 3.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 2.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 1.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams.pdf",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
-    "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Заметки по статье..md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_оригинал.md",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 11.png",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения/Figure 10.png",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events.pdf",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",
@@ -212,7 +213,6 @@
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Изображения",
     "Папки в компьютере/Документы/Документы.md",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams",
-    "Дипломная работа ИКИ/Статьи",
     "Папки в компьютере/Документы/appcompat/UA/UA_files.md",
     "Папки в компьютере/Документы/appcompat/UA/UA.md",
     "Папки в компьютере/Документы/appcompat/Programs/Amcache.hve.md",
