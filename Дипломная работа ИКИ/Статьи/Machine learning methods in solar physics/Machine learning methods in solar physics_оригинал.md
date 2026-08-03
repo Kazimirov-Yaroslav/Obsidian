@@ -19,7 +19,6 @@ doi: "10.3367/UFNe.2025.02.039872"
 **DOI:** [10.3367/UFNe.2025.02.039872](https://doi.org/10.3367/UFNe.2025.02.039872)
 
 ---
-
 ## Contents
 
 ### [[#1. Introduction|1. Introduction]]
@@ -32,7 +31,17 @@ doi: "10.3367/UFNe.2025.02.039872"
   - [[#2.2.4 Autoencoders|2.2.4 Autoencoders]]
   - [[#2.2.5 Generative models|2.2.5 Generative models]]
 - [[#2.3 Minimizing loss function|2.3 Minimizing loss function]]
-
+### [[#3. Data sets for machine learning|3. Data sets for machine learning]]
+### [[#4. Software for working with data|4. Software for working with data]]
+### [[#5. Machine learning models in solar physics|5. Machine learning models in solar physics]]
+- [[#5.1 Segmentation of solar disk images|5.1 Segmentation of solar disk images]]
+- [[#5.2 Parametric description of data|5.2 Parametric description of data]]
+- [[#5.3 Solar activity forecasts|5.3 Solar activity forecasts]]
+  - [[#5.3.1 Forecasting rare events|5.3.1 Forecasting rare events]]
+  - [[#5.3.2 Forecasting solar activity indices|5.3.2 Forecasting solar activity indices]]
+- [[#5.4 Reconstruction of observational data|5.4 Reconstruction of observational data]]
+- [[#5.5 Modeling dynamical processes|5.5 Modeling dynamical processes]]
+### [[#6. Conclusions|6. Conclusions]]
 ---
 
 ### 1. Introduction
@@ -393,6 +402,9 @@ A close relation exists between the different solar activity phenomena underlain
 
 It is assumed that solar filaments (prominences) form along the neutral lines of the solar magnetic field. Knowing the positions of the filaments, we can estimate the position of the neutral line and then arrange the polarity signs such that different signs are on different sides of the neutral line. The finer details of this process were described in literature, but even taking them into account leaves the result of polarity map reconstruction ambiguous, and the main catalogues of polarity maps were created manually over a long period of time. The idea of an automated approach, proposed recently, is based on posing an optimization problem and solving it by a function defined by a fully connected neural network. A polarity map filled with plus and minus signs is regarded as the surface of a smooth function depending on the heliographic coordinates, where the plus sign corresponds to the function value +1 and the minus sign, to -1, the function value along the neutral line being 0. The optimization problem is constructed based on the idea that the filament coordinates define the coordinates at which the function is equal to zero, and on a number of physical constraints that prevent the convergence to the trivial (zero) solution. It turns out that the solution to such an optimization problem is close to a polarity map constructed manually by an expert (Fig. 15).
 
+![[Figure 15.png|Figure 15]]
+**Figure 15:** Reconstruction examples of a magnetic field polarity map for three synoptic rotations (by rows). (a) Synoptic map specifying positions of solar filaments. (b) Polarity map constructed by an expert. (c) Averaging over 100 realizations of neural network reconstruction model. (d) Binarized version of (c).
+
 A finer structure of the magnetic field (e.g., coronal magnetic fields) can be reconstructed from photospheric observations. Typically, this is done using a force-free field model (system of equations),
 
 $$\nabla \cdot \mathbf{B} = 0, \quad (14)$$
@@ -404,27 +416,78 @@ $$\mathbf{B}(x, y, 0) = \mathbf{B}_0(x, y). \quad (15)$$
 
 The numerical solution to this problem is greatly complicated by the fact that the observational data do not fully agree with the force-free field model, and a possible solution must violate one condition or the other. The situation that has arisen contradicts standard numerical methods for solving differential equations, but can be implemented in the framework of the PINN model. Let us recall that the idea is that the neural network defines a function of spatial coordinates, which is then optimized to satisfy the differential equation and boundary conditions as accurately as possible. In the context of reconstructing the coronal magnetic field, such an idea was demonstrated in recent studies (Fig. 16). In another study, the PINN model was used to simulate the propagation of shock waves in the solar atmosphere.
 
+![[Figure 16.png|Figure 16]]
+**Figure 16:** Coronal magnetic field reconstruction above an active region using PINN model.
+
 Another example of a reconstruction problem is the translation of solar disk images obtained in one spectral region into images from another spectral region (image-to-image translation). In one study, a convolutional neural network model was proposed for reconstructing SDO/AIA images in the UV range using SDO/HMI magnetograms. A solution to the inverse problem was presented using a generative cGAN model (see the example in Fig. 17). As an application, the authors presented magnetograms of the far side of the Sun based on STEREO/EUVI observations. Further development of translation methods and new combinations of images were studied in other works.
 
+![[Figure 17.png|Figure 17]]
+**Figure 17:** Example of operation of SDO/HMI magnetogram reconstruction model based on SDO/AIA image of solar disk in 304-Å line. (a) Original SDO/AIA image, (b) reconstruction result, and (c) original SDO/HMI image.
+
 The task of increasing the spatial resolution of images and reducing noise can also be assigned to this group of tasks. One of the first attempts to use a convolutional neural network in this context was made in early studies. The model was trained on pairs of images with different spatial resolutions obtained by magnetohydrodynamic (MHD) modeling, and testing was carried out on real SDO/HMI magnetograms (Fig. 18). For further studies of models based on machine learning, see recent reviews.
+
+![[Figure 18.png|Figure 18]]
+**Figure 18:** *(Place for Figure 18: Super-resolution of SDO/HMI magnetograms)*
 
 The problem of the reliability of the resulting reconstructions was discussed in specialized literature. The authors conclude that, although the results are statistically quite plausible, the reconstruction quality is significantly reduced for rare and powerful events.
 
 The reconstruction problem is especially relevant when working with historical observational data stored in the form of handwritten notes and sketches. Using such data for systematic analysis requires digitization, and machine learning can help here when working with large catalogues. For example, in one study, the problem of digitizing more than 10,000 pages of handwritten tables specifying the positions of spots, faculae, and prominences from the Zurich Observatory archives was solved. The main difficulty was the large variability of handwriting, and therefore the model trained on a limited (albeit large) subsample of examples had difficulty recognizing text from a new handwriting. The solution was an adaptive approach: the model (a convolutional recurrent neural network, CRNN) was automatically retrained on each new page, using only the fact that the numbers in the tables with coordinates were not completely arbitrary but manifested some dependence. An example of the digitization result is shown in Fig. 19.
 
-We note that the adaptive approach significantly extends the capabilities of machine learning models. In the classical approach, a model is trained on a sample consisting of pairs of independent and dependent variables $(x_i, y_i)$, and is then used unaltered on new data (supervised learning). In practice, however, significant statistical changes can occur in the data over time, which causes the quality of the model to decline. Again, the standard solution is to prepare a new training sample and retrain the model. However, this is not always possible: changes may occur frequently, and the process of preparing training data usually takes a long time. Moreover, the fact that there is a decrease in the model quality is usually apparent not immediately but only after some time. Therefore, approaches are being developed in which models are automatically and continuously adjusted using self-training.
-
-![[Figure 15.png|Figure 15]]
-**Figure 15:** Reconstruction examples of a magnetic field polarity map for three synoptic rotations (by rows). (a) Synoptic map specifying positions of solar filaments. (b) Polarity map constructed by an expert. (c) Averaging over 100 realizations of neural network reconstruction model. (d) Binarized version of (c).
-
-![[Figure 16.png|Figure 16]]
-**Figure 16:** Coronal magnetic field reconstruction above an active region using PINN model.
-
-![[Figure 17.png|Figure 17]]
-**Figure 17:** Example of operation of SDO/HMI magnetogram reconstruction model based on SDO/AIA image of solar disk in 304-Å line. (a) Original SDO/AIA image, (b) reconstruction result, and (c) original SDO/HMI image.
-
-![[Figure 18.png|Figure 18]]
-**Figure 18:** *(Place for Figure 18: Super-resolution of SDO/HMI magnetograms)*
-
 ![[Figure 19.png|Figure 19]]
 **Figure 19:** *(Place for Figure 19: Digitization of historical Zurich Observatory tables)*
+
+We note that the adaptive approach significantly extends the capabilities of machine learning models. In the classical approach, a model is trained on a sample consisting of pairs of independent and dependent variables $(x_i, y_i)$, and is then used unaltered on new data (supervised learning). In practice, however, significant statistical changes can occur in the data over time, which causes the quality of the model to decline. Again, the standard solution is to prepare a new training sample and retrain the model. However, this is not always possible: changes may occur frequently, and the process of preparing training data usually takes a long time. Moreover, the fact that there is a decrease in the model quality is usually apparent not immediately but only after some time. Therefore, approaches are being developed in which models are automatically and continuously adjusted using self-training methods (self-supervised learning). We consider just a few ideas on how training pairs $(x_i, y_i)$ can be artificially created from an unlabeled sample (for which there are no target values $y_i$).
+
+A simple example is provided by a text with one word removed from it, the model's task being to fill the gap. The removed word becomes the target value. The opposite example is to restore the context for a given word in a sentence. In this case, the word environment is declared to be the target value. A similar example can be given for images: a certain detail is painted over in the image, and the model's task is to restore the missing part based on the image with a gap. The tasks used for self-supervised learning also include a black-and-white conversion of a color image and the inverse task of coloring, rotating an image by a given angle and determining the rotation angle, and cutting an image into pieces and reassembling it from the pieces.
+
+By construction, a self-supervised model does not directly solve the original problem (which could be, for example, an image classification problem), but solves some artificial problem. The rationale for such a substitution is to train the model to identify meaningful internal properties of objects or, in other words, to build a map sending them into a new feature space. In practice, it is often the case that the original problem (for example, classification) is solved much better in a new feature space than in the original one. We note that modern language models are built on this principle: first, the model learns some general principles with a large sample, and then the resulting model is used as a basis for solving specific problems.
+
+### 5.5 Modeling dynamical processes
+
+The most detailed picture of the stellar (solar) dynamo is currently obtained by direct numerical modeling of magnetohydrodynamics equations. Due to the specific features of the problem, this approach requires an extremely large computational grid, but even the most advanced computing systems are capable of providing calculations on a grid whose size is many orders of magnitude smaller than the one following from theoretical estimates. In view of this and a number of other problems, direct modeling remains one of the most difficult problems. 
+
+Another approach in the dynamo theory is associated with identifying and studying mean fields. Using it in numerical modeling methods has allowed reproducing the most significant regularities of large-scale magnetic fields of the Sun, such as the magnetic cycle (Hale's polarity rule), butterfly diagrams, and more subtle effects. 
+
+Machine learning methods are only beginning to be used in numerical modeling problems, but some areas are already shaping up. One is related to the acceleration of calculations in classical numerical schemes. For example, a method for estimating the initial approximation in Newton's tangent method for finding the root of a function was recently proposed, which allowed reducing the number of iterations of the nonlinear solver. The idea is that the machine learning algorithm uses the results of the preceding calculation steps to estimate the solution at the current step, and this estimate is used as an initial approximation (Fig. 20). A special feature of the method is that it does not use pretrained models but is optimized directly during the calculation process. The results show that, in some examples, the proposed method allows reducing the total calculation time by 20%. Although testing was carried out on a hydrodynamics problem, it may well be assumed that the effect of accelerating the calculation can be achieved in MHD problems as well.
+
+![[Figure 20.png|Figure 20]]
+**Figure 20:** Scheme for estimating initial approximation for Newton's method. Columns represent computational grid at successive time instants. Solutions at preceding time steps and solution at current time step (blue bars) are used to train the model, with current solution being the target value. Solutions at previous time steps, together with solution at current time step, are then fed to input of the model to predict solution for next step (green column). Predicted value is used as initial approximation for Newton's method.
+
+Another example of using machine learning is the closure of a system of equations for the joint description of large and small (subgrid) scales in turbulence modeling. An approach based on neural differential equations was used for this purpose. Recall that the essence of the approach is that the unknown function on the right-hand side of a differential equation is parameterized using a neural network, the calculation of the dynamics is launched using a standard numerical scheme, and the neural network is then optimized such that the resultant solution has the desired properties (for example, coincides with the dynamics available from observations or modeled by other methods).
+
+The problem of completely replacing the 'classical' numerical solver with a machine learning model in modeling turbulence was studied in several works. In particular, the authors used the neural operator and Fourier neural operator models, the essence of which is as follows. In a domain $D \subset \mathbb{R}^d$, we consider the equation defined by a differential operator $L$:
+
+$$(L_a u)(x) = f(x), \quad x \in D,$$
+$$u(x) = 0, \quad x \in \partial D,$$
+
+where $a$ are the coefficients of the equation (functions of $x$, including scalars), and the right-hand side $f$ is a fixed function. The classical approach to solving the problem is based on dividing the space into cells, using difference schemes to approximate the equations, and solving the resulting linear system. The idea of the neural operator is to find the kernel $k$ of the integral operator that maps the $(a, f)$ pair to the solution $u$ of the system:
+
+$$u(x) = \int_D k(x, y, a(x), a(y)) f(y) dy.$$
+
+We note that the desired kernel is the Green's function, i.e., the inverse operator of $L_a$. It can be defined (approximated), for example, using a fully connected neural network. To optimize the neural network, a sample $\{a_i, u_i\}$ of solutions of the problem for different coefficients $a$ is used. The target solutions $u_i$ can be obtained by a classical solver or known from observational (experimental) data. The constructed operator is then used to evaluate the solution of the problem for new values of $a$. The main advantage is the speed of solving the problem, which can be significantly higher than when solving using classical schemes.
+
+We compare the classical numerical approach and the solution based on machine learning. The advantage of the first approach is that it allows obtaining a solution for any admissible values of the control parameters, has accuracy guarantees, and gives rise to a physically consistent solution. The main disadvantage is the speed of the solution when using a fine grid. A solution based on machine learning (neural network operator), on the one hand, is orders of magnitude faster, but the model requires pretraining, which takes significant time (primarily and foremost for creating a training sample). In addition, the obtained model can be applied reasonably only in the range of equation parameters from which the training examples were taken. The accuracy of the obtained solution is difficult to control in advance (theory only deals with accuracy in the limit of an infinitely growing sample), and there are no guarantees of the physical consistency of the solution. 
+
+Despite the apparently impressive list of shortcomings, speed is sometimes a decisive factor from a practical standpoint. For example, this tool can be useful when it is necessary to simulate a large number of scenarios for a preliminary assessment of statistical properties or to select some scenarios useful for further work. In such situations, a fast but not entirely accurate solution can be more practical than a slow but accurate one.
+
+### 6. Conclusions
+
+Machine learning methods have shaped a new direction in solar physics research. Its key components are:
+- large data sets,
+- data processing tools,
+- machine learning models.
+
+One of the first important effects of this new direction, which had an impact on the entire field of research as a whole, was the emergence of large and homogeneous data sets prepared for statistical research. This has allowed redirecting the time and effort that was previously spent on preparing data to their direct analysis, and resulted in an increased number of publications. This also made the results of independent studies comparable and provided a basis for their reproduction, which are the most important features of scientific research. Big data have become an independent value in solar physics in particular and in science in general.
+
+The second significant effect was the development of basic tools for working with data and their publication in the public domain. This gives rise to the unification of data preparation procedures and hence to the reproducibility of studies.
+
+Third, machine learning models have allowed mathematically formulating and studying problems that previously remained poorly formalized. For example, over the 400 years of observations, the problem of identifying the boundary of a sunspot was to be solved by each observer individually. Machine learning methods allow posing the problem of reproducing a specific data processing technique and extending it to longer data series.
+
+The research design in solar physics has changed in many ways. Research is becoming interdisciplinary, at the intersection of physical science and computing technologies. Theoretical physicists, machine learning specialists, and computing infrastructure specialists are taking part in the work. Large computing centers are becoming the venues for conducting research.
+
+Applications of machine learning methods are currently being studied in almost all areas of solar physics. Specialized conferences are devoted to the discussion of the results, leading journals on solar physics aggregate papers on machine learning methods into thematic issues, and reviews and books are published.
+
+Machine learning is a new research tool, but the role of the researcher remains paramount. Machine learning-based models look promising in applied problems that require high-speed processing of large and/or multidimensional data sets and support for a given methodology. As part of the development of the general theory, machine learning models can be used to describe relations not yet covered by theory and for subsequent mathematical modeling.
+
+Current and future tasks for machine learning are characterized by the scale of the data involved and the complexity of the models and training procedures. As in any science, reaching such a level does not happen overnight, but requires many years of practice, experience, and a modern technological base. Our country has all the components for such research, and it is only necessary to keep working systematically to stay at the forefront of solar physics.
+

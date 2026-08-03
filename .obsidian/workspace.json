@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Файловый менеджер"
@@ -185,6 +187,10 @@
   "lastOpenFiles": [
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 20.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 19.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 18.png",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 17.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 16.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 15.png",
@@ -192,13 +198,9 @@
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 13.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 12.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 11.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 10.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 9.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics.pdf",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Заметки по статье..md",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 8.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams.pdf",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics",
