@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дипломная работа ИКИ/Filament-Unet/Ссылка.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ссылка"
+              "title": "README"
             }
           }
         ]
@@ -180,42 +180,45 @@
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false,
       "bases:Создать новую базу": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "vscode-editor:Create Code File": false
     }
   },
-  "active": "0d7d75b8b4bf641e",
+  "active": "9e0aac6ac95913d9",
   "lastOpenFiles": [
-    "README.md",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8935650.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8912044.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8864214.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8825177.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8530137.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8518201.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8500458.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8453835.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8138174.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8134124.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8125432.png",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/test",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/STARE_results",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/README.md",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/LICENSE",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master.zip",
+    "Дипломная работа ИКИ/Filament-Unet/Неподтверждено 232591.crdownload",
     "Дипломная работа ИКИ/Filament-Unet/Ссылка.md",
+    "README.md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
-    "Дипломная работа ИКИ/Filament-Unet",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics.pdf",
-    "Дипломная работа ИКИ/SunPy",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",
-    "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams.pdf",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events.pdf",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 20.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 19.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 18.png",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Заметки по статье.md",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 17.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 16.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 15.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 14.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 13.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 12.png",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения/Figure 11.png",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Заметки по статье..md",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Заметки по статье..md",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Изображения",
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_перевод.md",
     "Дипломная работа ИКИ/Статьи/Extreme solar events/Extreme solar events_оригинал.md",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events/Изображения",
-    "Дипломная работа ИКИ/Статьи/Extreme solar events",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_оригинал.md",
-    "Новый текстовый документ.txt",
     "Папки в компьютере/Документы/Документы.md",
     "Папки в компьютере/Документы/appcompat/UA/UA_files.md",
     "Папки в компьютере/Документы/appcompat/UA/UA.md",
@@ -229,8 +232,6 @@
     "Папки в компьютере/Документы/appcompat/appraiser/APPRAISER_TelemetryBaseline.md",
     "Папки в компьютере/Документы/appcompat/appcompat.md",
     "Папки в компьютере/Документы/appcompat/backupTest/backupTest.md",
-    "Папки в компьютере/Документы/appcompat/Backup/S-1-5-21-3961970477-2855253553-1328507035-1000.md",
-    "Папки в компьютере/Документы/appcompat/Backup/Backup.md",
     "Без названия.canvas"
   ]
 }
