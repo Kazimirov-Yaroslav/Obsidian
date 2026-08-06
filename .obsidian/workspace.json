@@ -144,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Папки в компьютере/Документы/Документы.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Документы"
+              "title": "Структура"
             }
           },
           {
@@ -168,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 431.9000244140625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,7 +184,7 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "9e0aac6ac95913d9",
+  "active": "b02742b517b4ef8d",
   "lastOpenFiles": [
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8935650.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8912044.png",
