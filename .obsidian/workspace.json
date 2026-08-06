@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дипломная работа ИКИ/Filament-Unet/Ссылка.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ссылка"
+              "title": "README"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "0d7d75b8b4bf641e",
   "lastOpenFiles": [
-    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
     "Дипломная работа ИКИ/Filament-Unet/Ссылка.md",
+    "README.md",
+    "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
     "Дипломная работа ИКИ/Filament-Unet",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics.pdf",
     "Дипломная работа ИКИ/SunPy",
@@ -230,7 +231,6 @@
     "Папки в компьютере/Документы/appcompat/backupTest/backupTest.md",
     "Папки в компьютере/Документы/appcompat/Backup/S-1-5-21-3961970477-2855253553-1328507035-1000.md",
     "Папки в компьютере/Документы/appcompat/Backup/Backup.md",
-    "Папки в компьютере/Документы/appcompat/appraiser/Appraiser_AlternateData.md",
     "Без названия.canvas"
   ]
 }
