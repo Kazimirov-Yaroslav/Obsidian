@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -168,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 431.9000244140625
+    "width": 235.0999755859375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,8 +184,9 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "b02742b517b4ef8d",
+  "active": "0d7d75b8b4bf641e",
   "lastOpenFiles": [
+    "README.md",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8935650.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8912044.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8864214.png",
@@ -196,7 +197,6 @@
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8453835.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8138174.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8134124.png",
-    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_29_8125432.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/test",
@@ -209,7 +209,6 @@
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master.zip",
     "Дипломная работа ИКИ/Filament-Unet/Неподтверждено 232591.crdownload",
     "Дипломная работа ИКИ/Filament-Unet/Ссылка.md",
-    "README.md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_перевод.md",
     "Дипломная работа ИКИ/Статьи/Machine learning methods in solar physics/Machine learning methods in solar physics_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Extreme Solar Flare Prediction Using Residual Networks with HMI Magnetograms and Intensitygrams/Extreme Solar Flare Prediction_перевод.md",

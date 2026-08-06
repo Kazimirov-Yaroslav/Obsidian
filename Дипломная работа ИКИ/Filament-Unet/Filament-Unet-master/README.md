@@ -27,3 +27,11 @@ you could use trained model to predict segmentation results in data/filament/tes
 
 you could train the model through running filament_training.py.
 
+This folder contains code originally written by zhixuhao.
+
+Copyright (c) 2019 zhixuhao
+License: MIT
+Original repository: [GF-Zhu/Filament-Unet](https://github.com/GF-Zhu/Filament-Unet/tree/master)
+
+The code is being modified and annotated for personal study and personal use.
+
