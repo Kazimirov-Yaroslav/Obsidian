@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Дипломная работа ИКИ/Github/Git - большие файлы и папки.md",
+                "file": "Дипломная работа ИКИ/Github/Чужой код.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git - большие файлы и папки"
+              "title": "Чужой код"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "0d7d75b8b4bf641e",
   "lastOpenFiles": [
-    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/README.md",
     "Дипломная работа ИКИ/Github/Git - большие файлы и папки.md",
+    "Дипломная работа ИКИ/Github/Чужой код.md",
+    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/README.md",
     "Дипломная работа ИКИ/Github",
     "README.md",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8935650.png",
@@ -231,7 +232,6 @@
     "Папки в компьютере/Документы/appcompat/backupTest/backupTest_files.md",
     "Папки в компьютере/Документы/appcompat/appraiser/APPRAISER_TelemetryBaseline.md",
     "Папки в компьютере/Документы/appcompat/appcompat.md",
-    "Папки в компьютере/Документы/appcompat/backupTest/backupTest.md",
     "Без названия.canvas"
   ]
 }
