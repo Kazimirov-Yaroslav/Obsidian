@@ -27,6 +27,8 @@ you could use trained model to predict segmentation results in data/filament/tes
 
 you could train the model through running filament_training.py.
 
+
+## Important information
 This folder contains code originally written by zhixuhao.
 
 Copyright (c) 2019 zhixuhao
