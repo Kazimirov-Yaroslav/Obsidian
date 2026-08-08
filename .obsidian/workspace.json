@@ -11,10 +11,14 @@
             "id": "052a5a622c8e870b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/Заметки по коду и структуре..md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Заметки по коду и структуре."
             }
           }
         ]
@@ -181,7 +185,7 @@
       "obsidian-excalidraw-plugin:Создать новый чертеж": false
     }
   },
-  "active": "b02742b517b4ef8d",
+  "active": "052a5a622c8e870b",
   "lastOpenFiles": [
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/Заметки по коду и структуре..md",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/README.md",
