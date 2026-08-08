@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3bd4f6ce9332faa6",
+        "id": "20d9ed71ab7c6f43",
         "type": "tabs",
         "children": [
           {
-            "id": "0d7d75b8b4bf641e",
+            "id": "8c411b6c69744178",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Заметки по статье.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Заметки по статье"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -185,10 +185,14 @@
       "obsidian-excalidraw-plugin:Создать новый чертеж": false
     }
   },
-  "active": "0d7d75b8b4bf641e",
+  "active": "8c411b6c69744178",
   "lastOpenFiles": [
-    "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Solar Filament Recognition Based on Deep Learning_перевод.md",
+    "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/Заметки по коду и структуре..md",
+    "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/README.md",
+    "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/data/filament/test/1_predict.png",
+    "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/data/filament/test/0_predict.png",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Заметки по статье.md",
+    "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Solar Filament Recognition Based on Deep Learning_перевод.md",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Solar Filament Recognition Based on Deep Learning_оригинал.md",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Solar Filament Recognition Based on Deep Learning.pdf",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Изображения/Figure 7.png",
@@ -210,8 +214,6 @@
     "Дипломная работа ИКИ/Github",
     "README.md",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8935650.png",
-    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8912044.png",
-    "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug/mask_3_8864214.png",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train/aug",
     "Дипломная работа ИКИ/Filament-Unet/Filament-Unet-master/data/filament/train",
     "Дипломная работа ИКИ/Filament-Unet/Ссылка.md",
@@ -231,8 +233,6 @@
     "Папки в компьютере/Документы/appcompat/Programs/Amcache (1).hve.md",
     "Папки в компьютере/Документы/appcompat/Programs/Install/Install.md",
     "Папки в компьютере/Документы/appcompat/Programs/Programs.md",
-    "Папки в компьютере/Документы/appcompat/pca/PcaWallpaperApp.md",
-    "Папки в компьютере/Документы/appcompat/pca/pca.md",
     "Без названия.canvas"
   ]
 }
