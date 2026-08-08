@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "20d9ed71ab7c6f43",
+        "id": "f501cff48641d17f",
         "type": "tabs",
         "children": [
           {
-            "id": "8c411b6c69744178",
+            "id": "052a5a622c8e870b",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -185,7 +181,7 @@
       "obsidian-excalidraw-plugin:Создать новый чертеж": false
     }
   },
-  "active": "8c411b6c69744178",
+  "active": "b02742b517b4ef8d",
   "lastOpenFiles": [
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/Заметки по коду и структуре..md",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/README.md",
