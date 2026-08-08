@@ -1,3 +1,9 @@
-/.obsidian/plugins/obsidian-git/
-/.obsidian/workspace.json
+# Игнорируем файлы рабочего пространства
 .obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Игнорируем папку с мусором
+.trash/
+
+# Игнорируем настройки плагина Git
+.obsidian/plugins/obsidian-git/
