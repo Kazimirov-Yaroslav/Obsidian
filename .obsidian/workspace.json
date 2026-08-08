@@ -14,8 +14,8 @@
               "type": "markdown",
               "state": {
                 "file": "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/data/filament/train/Заметки по папке train.md",
-                "mode": "source",
-                "source": false
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Заметки по папке train"
