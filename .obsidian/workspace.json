@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f501cff48641d17f",
+        "id": "5c4cf7ce42e091fc",
         "type": "tabs",
         "children": [
           {
-            "id": "052a5a622c8e870b",
+            "id": "435c8d957a1a6d1a",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".gitignore",
-                "bFile": ".gitignore",
-                "aRef": ""
+                "file": "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/data/filament/train/Заметки по папке train.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: .gitignore  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Заметки по папке train"
             }
           }
         ]
@@ -185,7 +185,7 @@
       "obsidian-excalidraw-plugin:Создать новый чертеж": false
     }
   },
-  "active": "052a5a622c8e870b",
+  "active": "435c8d957a1a6d1a",
   "lastOpenFiles": [
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/data/filament/train/Заметки по папке train.md",
     "Дипломная работа ИКИ/Статьи/Solar Filament Recognition Based on Deep Learning/Filament-Unet/Filament-Unet-master/README.md",

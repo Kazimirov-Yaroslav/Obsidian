@@ -8,3 +8,4 @@ data\filament\train\image
 
 data\filament\train\label
 Соответственно 30 базовых бинарных масок.
+5
