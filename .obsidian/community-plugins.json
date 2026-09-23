@@ -3,5 +3,6 @@
   "remotely-save",
   "obsidian-git",
   "vscode-editor",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "dataview"
 ]
