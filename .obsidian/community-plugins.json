@@ -4,5 +4,6 @@
   "obsidian-git",
   "vscode-editor",
   "obsidian-excalidraw-plugin",
-  "dataview"
+  "dataview",
+  "excalidraw-extras"
 ]
