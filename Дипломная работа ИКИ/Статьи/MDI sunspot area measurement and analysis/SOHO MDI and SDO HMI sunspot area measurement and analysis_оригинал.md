@@ -371,7 +371,7 @@ The author declares no conflict of interest.
 ## Data Availability
 
 The SOHO and SDO total sunspot area catalogue is available on the author's website. The data and mask images underlying this paper will also be shared on a reasonable request to the author.
-
+[SDO Total Sunspot Area](https://www.petermeadows.com/SDOSunspotArea/)
 ## References
 
 *References would be listed here*
